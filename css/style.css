@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: SVN-GilroyRegular;
+    color: #000;
 }
 img, .img-auto {
     width: auto;
@@ -66,6 +67,18 @@ h2, h3 {
     font-style: normal;
 }
 @font-face {
+    font-family: SVN-GilroyMedium;
+    src: url('../fonts/SVN-GilroyMedium.otf') format('opentype');
+    font-weight:normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: SVN-GilroySemiBold;
+    src: url('../fonts/SVN-GilroySemiBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
     font-family: SanFranciscoDisplayBold;
     src: url('../fonts/SanFranciscoDisplay-Bold.otf') format('opentype');
     font-weight: bold;
@@ -122,12 +135,12 @@ input[type="checkbox"] + label {
     color: #9EA3AE;
     display: block;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 13px;
     position: relative;
     user-select: none;
     transition: 0.2s;
     padding-left: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: left;
 }
 input[type="checkbox"] + label::before {
@@ -140,7 +153,7 @@ input[type="checkbox"] + label::before {
     border-radius: 6px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -5px;
     transition: 0.2s;
 }
 input[type="checkbox"] + label::after {
@@ -153,7 +166,7 @@ input[type="checkbox"] + label::after {
     height: 16px;
     position: absolute;
     left: 12px;
-    top: 4px;
+    top: -2px;
     transform: rotate(45deg);
     transition: 0.2s;
 }
@@ -245,13 +258,12 @@ h2.title {
 }
 .page-top h2 {
     font-size: 22px;
-    line-height: 26px;
-    margin: 10px 0 5px;
+    line-height: 24px;
+    margin: 20px 0 5px;
 }
 h2.title-set {
     font-size: 19px;
     line-height: 20px;
-    margin-bottom: 10px;
 }
 .page-top h3 {
     font-size: 27px;
@@ -260,9 +272,14 @@ h2.title-set {
 }
 .page-top p {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 16px;
     color: #BBB;
     margin: 0 18px;
+}
+.page-top p.txt-franulight {
+    font-family: SanFranciscoDisplayUltralight;
+    color: #9EA3AE;
+    margin: 0 40px;
 }
 .page-top p.dola-unit {
     font-family: SVN-GilroyLight;
@@ -302,7 +319,7 @@ h2.title-set {
     font-family: SanFranciscoDisplayMedium;
     font-size: 10px;
     line-height: 12px;
-    color: #000;
+    color: #0F0F0F;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -319,6 +336,9 @@ h2.title-set {
     align-items: center;
 }
 /* page-bottom */
+.owl-theme .owl-dots {
+    margin-bottom: 10px;
+}
 .page-bottom {
     position: absolute;
     bottom: 10px;
@@ -327,24 +347,29 @@ h2.title-set {
     right: 0;
     margin: 0 auto;
 }
-.page-bottom button {
-    font-family: SVN-GilroyRegular;
-}
 .page-bottom button[type="submit"] {
     width: 100%;
+    font-family: SanFranciscoTextSemibold;
     font-size: 14px;
-    line-height: 38px;
+    line-height: 16px;
     color: #9EA3AE;
+    padding: 12px 0;
+}
+.page-info .page-bottom button[type="submit"] {
+    width: 100%;
+    font-family: SVN-GilroyRegular;
+    font-size: 14px;
+    line-height: 15px;
 }
 .page-bottom button[type="submit"].active {
     background: #3B82F6;
     border-radius: 6px;
-    color: #fff;
+    color: #F9FAFB;
 }
 .page-bottom button[type="submit"].no-active {
     background: #BFDBFE;
     border-radius: 6px;
-    color: #fff;
+    color: #F9FAFB;
 }
 /* Modal */
 .modal-bg {
@@ -377,7 +402,7 @@ h2.title-set {
     float: right;
 }
 .modal-img {
-    margin: 27px 40px 30px;
+    margin: 27px 41px 30px;
 }
 .modal-txt {
     font-family: SanFranciscoDisplayBold;
@@ -448,11 +473,11 @@ h2.title-set {
 }
 /* page-main */
 .logo {
-    margin: 0 35px;
+    margin: 0 34px;
 }
-.page-info {
-    top: 25%;
-    transform: translateY(-25%);
+.page-info .vertical-info {
+    top: 30%;
+    transform: translateY(-30%);
 }
 .slide-item h1, .slide-item h2 {
     display: flex;
@@ -461,16 +486,15 @@ h2.title-set {
 .text-welcome {
     font-family: SVN-GilroyBold;
     font-size: 23px;
-    font-weight: bold;
-    line-height: 28px;
+    line-height: 24px;
     color: #27367A;
-    margin: 0;
+    margin-top: 10px;
 }
 .slide-2 {
     margin: 0 42px;
 }
 .slide-3 {
-    margin: 0 26px;
+    margin: 0 51px;
 }
 .text-slide {
     margin-top: 50px;
@@ -489,11 +513,11 @@ h2.title-set {
     color: #9EA3AE;
     margin-top: 10px;
 }
-.page-backup {
-    top: 55%;
-    transform: translateY(-55%);
+.page-backup .vertical-info {
+    top: 40%;
+    transform: translateY(-40%);
 }
-.page-backup p {
+.page-backup p.img-backup {
     margin: 0 58px;
 }
 .phrase-backup {
@@ -508,7 +532,7 @@ h2.title-set {
     font-size: 14px;
     line-height: 17px;
     color: #9EA3AE;
-    border: 1px solid #9EA3AE;
+    border: 1px solid #707070;
     border-radius: 10px;
     padding: 4px 5px;
     margin: 0 5px 15px;
@@ -525,7 +549,7 @@ h2.title-set {
 .txt-metro {
     background: #FFECEC;
     border-radius: 6px;
-    font-family: SanFranciscoDisplayLight;
+    font-family: SanFranciscoDisplayUltralight;
     font-size: 12px;
     line-height: 14px;
     color: #DF0000;
@@ -540,7 +564,7 @@ h2.title-set {
     width: 15px;
     height: 15px;
     position: absolute;
-    top: 13px;
+    top: 11px;
     left: 10px;
 }
 .phrase-copy {
@@ -553,7 +577,7 @@ h2.title-set {
 .bg-gray .txt-error {
     font-family: SanFranciscoDisplayLight;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 16px;
     color: #DF0000;
     position: relative;
     display: flex;
@@ -577,6 +601,7 @@ h2.title-set {
     text-indent: -9999px;
     height: 23px;
     padding: 0;
+    border: 1px solid #e4e4e5;
 }
 .phrase-none span:nth-child(1), .phrase-none span:nth-child(9) {
     width: 36px;
@@ -621,17 +646,17 @@ h2.title-set {
     font-family: SVN-GilroyBold;
     font-size: 23px;
     line-height: 24px;
-    color: #fff;
+    color: #F9FAFB;
 }
 .name-wallet {
-    font-family: SanFranciscoDisplayLight;
+    font-family: SanFranciscoDisplayUltralight;
     font-size: 13px;
     line-height: 15px;
     color: #DFDFDF;
     margin: 5px 0 20px;
 }
 .icon-wallet a {
-    font-family: SanFranciscoDisplayLight;
+    font-family: SanFranciscoDisplayUltralight;
     font-size: 10px;
     line-height: 12px;
     color: #F9FAFB;
@@ -654,35 +679,30 @@ h2.title-set {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 0;
 }
 .detail-wallet .item:last-of-type {
     border-bottom: none;
 }
-.detail-wallet .item .pull-left dl {
+.detail-wallet .item span {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin: 8px 0;
-
-}
-.detail-wallet .item .pull-left dd {
-    margin-left: 10px;
-    text-align: left;
     font-family: SanFranciscoDisplaySemibold;
+    font-size: 16px;
+    line-height: 19px;
+}
+.detail-wallet .item span.txt-ligth14 {
+    font-family: SVN-GilroyLight;
     font-size: 14px;
-    line-height: 16px;
-}
-.detail-wallet .item .pull-left dd b {
-    font-family: SanFranciscoTextSemibold;
-    font-size: 12px;
-    line-height: 14px;
-    display: block;
-}
-.detail-wallet .item .pull-left dd span, .detail-wallet .item .pull-right span {
-    font-family: SanFranciscoTextLight;
-    font-size: 10px;
-    line-height: 12px;
+    line-height: 15px;
     color: #9EA3AE;
+    margin-left: 5px;
+    display: contents;
+}
+.detail-wallet .item span img {
+    margin-right: 10px;
+    width: auto;
 }
 .detail-wallet .item .pull-left dd span.percent-unit {
     color: #D10000;
@@ -692,12 +712,6 @@ h2.title-set {
 }
 .detail-wallet .item .pull-right {
     text-align: right;
-}
-.detail-wallet .item .pull-right span.unit {
-    font-family: SanFranciscoTextSemibold;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000;
 }
 .detail-wallet .item .pull-right span.unit-item {
     font-family: SanFranciscoTextMedium;
@@ -766,11 +780,13 @@ h2.title-set {
     font-size: 14px;
     line-height: 16px;
     padding: 4px 10px 4px 30px;
+    color: #202020;
 }
 .search-wallet input::placeholder {
     font-family: SanFranciscoDisplayUltralight;
     font-size: 14px;
     line-height: 16px;
+    color: #202020;
 }
 .send-box {
     background: #F9FAFB;
@@ -847,7 +863,7 @@ h2.title-set {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #E8E8E8;
-    padding: 5px;
+    padding: 6px 5px;
 }
 .change-item dl:last-of-type {
     border-bottom: none;
@@ -896,7 +912,7 @@ h2.title-set {
     padding: 10px 0 15px;
 }
 .qr-white .logo-unr {
-    width: 40%;
+    width: 39%;
     margin: auto;
 }
 .qr-white .logo-qr {
@@ -1008,6 +1024,9 @@ h2.title-set {
 .change-history dl.plus-change dd {
     color: #19C09A;
 }
+.page18 .page-content, .page23 .page-content {
+    margin-top: 20px;
+}
 .page26 .page-top h3.sub-title {
     font-size: 50px;
     line-height: 53px;
@@ -1074,6 +1093,9 @@ h2.title-set {
 }
 .page28 .page-top h2 {
     margin: 20px 0;
+}
+.page28 .page-bottom button[type="submit"] {
+    font-family: SVN-GilroySemiBold;
 }
 .change-unit-bg {
     background: #F4F4F6;
@@ -1181,7 +1203,7 @@ h2.title-set {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: SVN-GilroyRegular;
+    font-family: SVN-GilroyMedium;
     font-size: 14px;
     line-height: 15px;
     color: #000;
@@ -1189,7 +1211,7 @@ h2.title-set {
 .page-setting ul li a span.txt-gray {
     font-size: 12px;
     line-height: 13px;
-    color: #CECECE;
+    color: #DBDBDB;
     margin-right: 30px;
 }
 .page-setting ul li a img {
@@ -1209,19 +1231,11 @@ h2.title-set {
     margin-bottom: 0;
 }
 .set-sub {
-    font-family: SVN-GilroyRegular;
-    font-size: 14px;
-    line-height: 15px;
     color: #DBDBDB;
-    text-align: left;
     margin: 10px 0 5px;
 }
 .page-setting dl p {
-    font-family: SVN-GilroyRegular;
-    font-size: 14px;
-    line-height: 15px;
     color: #000;
-    text-align: left;
     margin-left: 5px;
 }
 .page-setting dl p span {
@@ -1234,10 +1248,10 @@ h2.title-set {
     margin-top: 30px;
 }
 .page-setting p {
-    font-family: SVN-GilroyRegular;
+    font-family: SVN-GilroyMedium;
     font-size: 14px;
-    text-align: left;
     line-height: 15px;
+    text-align: left;
 }
 .page-setting .txt-notify {
     color: #DBDBDB;
@@ -1245,6 +1259,7 @@ h2.title-set {
 }
 .page-setting.page36 .txt-notify {
     text-align: center;
+    letter-spacing: normal;
 }
 .page-setting .page-content button {
     background: #3B82F6;
